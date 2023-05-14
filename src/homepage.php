@@ -49,18 +49,15 @@
   The Missing in Action is NOT a registered non-profit organization and any donations will NOT be tax-deductible.</p>
   </p> 
 </div>
- 
 
 <div class="dropdown"> 
       <button class="dropbtn">
-        <span style="font-size:36px;cursor:pointer;" onclick="openNav()">&#9776;</span></button>
+        <span style="font-size:36px;cursor:pointer;" onclick="()">&#9776;</span></button>
       <div class="dropdown-content">
-          <a href="http://localhost:8080/fd/advance_add.php">Advanced Add</a>
-  <a href="http://localhost:8080/fd/searchcase.php">Aplhaberical Cases</a>
-  <a href="http://localhost:8080/fd/login.php">Admin</a>
-  <a id="btn" onclick="dtow()">Dark mode</a>
-
-
+          <a href="http://localhost/testmia/advance_add.php">Advanced Add</a>
+          <a href="http://localhost/testmia/searchcase.php">Alphabetical Search</a>
+          <a href="http://localhost/testmia/login.php">Admin</a>
+          <a id="btn" onclick="dtow()">Dark mode</a>
       </div>
  </div>
 <script type="text/javascript" src="homepage.js"></script>

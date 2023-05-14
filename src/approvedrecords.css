@@ -1,74 +1,9 @@
-.dark-mode {
-  background-color: black;
-  color: white;
-  background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 0, 0.5)),url(bc.jpg);
-  overflow: auto;
-}
-
-
-
-h2 {
-  color: red;
-}
-h1{
-  margin: -31px;
-  padding: 0px;
-}
-.title{
-  position: absolute;
-  font-size: 30px;
-  margin: 57px 0px 0px 76px;
-}
-.summary{
-  position: absolute;
-  margin:204px 0px 0px 42px
-}
-
-.summary p{
-  font-size: 20px;
-}
-img {
-  position: absolute;
-  margin: 349px 0px 0px -11px;
-
-}
-.week{
-  position: absolute;
- margin:152px 0px 0px 777px;
-}
-.person_{
-   position: absolute;
- margin: -74px 0px 0px 823px;
-}
-.name{
-    position: absolute;
- margin: -121px 0px 0px 857px;
-
-}
-.mia{
-    position: absolute;
- margin: 277px 0px 0px 955px;
-
-}
-
-.aa{
-  position: absolute;
- margin: 363px 0px 0px 103px;
-}
-.header{
-  position: absolute;
-  margin: 571px 0px 0px 116px;
-
-
-}
-
-/*====*/
 body {
   font-family: "Lato", sans-serif;
    padding: 25px;
   background-color: white;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /* Dropdown Button */
@@ -94,10 +29,15 @@ body {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: absolute;
   float: right;
-  margin:  0px 0px 0px 0px;
+  margin: -80px  0px 0px 1124px;
+
+
+}
+.dropdown button {
+  background-color: black; 
+  color: red;
 }
 
 .dropdown-content {
@@ -137,7 +77,50 @@ body {
   .dropdown-content {padding-top: 15px;}
   .dropdown-content a {font-size: 18px;}
 }
+.bio{
+  position: absolute;
+  margin:-113px 0px 0px 622px;
+}
+.o_c{
+  position: absolute;
+  margin:-89px 0px 0px 904px;
 
-/*=======================*/
+}
+.details{
+  position: absolute;
+  margin:347px 0px 0px 1px;
+}
+.square_1{
+ height: 1px;
+    width: 1400px;
+    background-color: #555;
+   margin: 9px 0px 0px -7px;
+}
+.header{
+  position: absolute;
+  margin: 37px 0px 0px 15px;
+
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 0, 0.5)),url(bc.jpg);
+  overflow: auto;
+}

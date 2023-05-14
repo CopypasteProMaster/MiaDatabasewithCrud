@@ -6,11 +6,10 @@ include_once("config.php");
 if(isset($_POST['update']))
 {
 	$id = $_POST['id'];
-
+	$images=$_POST['images'];
 	$name=$_POST['name'];
 	$middle_name=$_POST['middle_name'];
 	$last_name=$_POST['last_name'];
-	$name=$_POST['name'];
 	$suffix =$_POST['suffix'];
 	//================
 	$sex =$_POST['sex'];
@@ -32,6 +31,7 @@ if(isset($_POST['update']))
 	$text_6 = $_POST["text_6"];
 	$text_7 = $_POST["text_7"];
 	$gmail=$_POST['gmail'];
+	$images = str_replace("'", "\'",$images);
 	$height_weight = str_replace("'", "\'",$height_weight);
 	$text_1 = str_replace("'", "\'",$text_1);
 	$text_2 = str_replace("'", "\'",$text_2);
@@ -40,10 +40,13 @@ if(isset($_POST['update']))
 	$text_5 = str_replace("'", "\'",$text_5);
 	$text_6 = str_replace("'", "\'",$text_6);
 	$text_7 = str_replace("'", "\'",$text_7);
+	$height_weight = mysqli_real_escape_string($con, $height_weight);
+
+
 
 
 	// update user data
-	$result = mysqli_query($con, "UPDATE test SET name='$name',middle_name='$middle_name',last_name='$last_name',
+	$result = mysqli_query($con, "UPDATE records SET images='$images', name='$name',middle_name='$middle_name',last_name='$last_name',
 		suffix='$suffix',sex='$sex',missing_since='$missing_since',city='$city',street='$street',classification='$classification',birthday='$birthday',age='$age',height_weight='$height_weight',race='$race',
 		text_1='$text_1',text_2='$text_2',text_3='$text_3',text_4='$text_4',text_5='$text_5',
 		text_6='$text_6',text_7='$text_7',
@@ -62,10 +65,11 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 // Fetech user data based on id
-$result = mysqli_query($con, "SELECT * FROM test WHERE id=$id");
+$result = mysqli_query($con, "SELECT * FROM records WHERE id=$id");
 
 while($user_data = mysqli_fetch_array($result))
-{
+{	
+	$images = $user_data['images'];
 	$name = $user_data['name'];
 	$middle_name = $user_data['middle_name'];
 	$last_name = $user_data['last_name'];
@@ -147,7 +151,8 @@ while($user_data = mysqli_fetch_array($result))
 			</tr>
 			<tr>
 				<td>heighandweight</td>
-				<td><input type="text" name="height_weight" value=<?php echo $height_weight;?>></td>
+				<td><textarea name="height_weight"  ><?php echo $height_weight; ?></textarea></td>
+			</tr>
 			</tr>
 			<tr>
 				<td>race</td>
@@ -155,45 +160,40 @@ while($user_data = mysqli_fetch_array($result))
 			</tr>
 			<tr>
 				<td>text1</td>
-				<td><input type="text" name="text_1" value=<?php echo $text_1;?>></td>
+				<td><textarea name="text_1" ><?php echo $text_1; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text2</td>
-				<td><input type="text" name="text_2" value=<?php echo $text_2;?>></td>
+				<td><textarea name="text_2" ><?php echo $text_2; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text3</td>
-				<td><input type="text" name="text_3" value=<?php echo $text_3;?>></td>
+				<td><textarea name="text_3" ><?php echo $text_3; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text4</td>
-				<td><input type="text" name="text_4" value=<?php echo $text_4;?>></td>
+				<td><textarea name="text_4" ><?php echo $text_4; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text5</td>
-				<td><input type="text" name="text_5" value=<?php echo $text_5;?>></td>
+				<td><textarea name="text_5" ><?php echo $text_5; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text6</td>
-				<td><input type="text" name="text_6" value=<?php echo $text_6;?>></td>
+				<td><textarea name="text_6" ><?php echo $text_6; ?></textarea></td>
 			</tr>
 			<tr>
 				<td>text7</td>
-				<td><input type="text" name="text_7" value=<?php echo $text_7;?>></td>
+				<td><textarea name="text_7" ><?php echo $text_7; ?></textarea></td>
 			</tr>
-
-
-
-
-
-
-
-
-
 
 			<tr>
 				<td>Gmail</td>
 				<td><input type="text" name="gmail" value=<?php echo $gmail;?>></td>
+			</tr>
+			<tr>
+				<td>images</td>
+				<td><textarea name="images" ><?php echo $images; ?></textarea></td>
 			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>

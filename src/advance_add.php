@@ -19,18 +19,15 @@
       <button class="dropbtn">
         <span style="font-size:36px;cursor:pointer;" onclick="openNav()">&#9776;</span></button>
       <div class="dropdown-content">
-          <a href="http://localhost:8080/mia/as.php">About</a>
-          <a href="http://localhost:8080/mia/as.php">Services</a>
-  <a href="http://localhost:8080/fd/searchcase.php">Aplhaberical Cases</a>
-  <a href="http://localhost:8080/fd/homepage.php">Homepage</a>
+          <a href="http://localhost/mia/as.php">About</a>
+          <a href="http://localhost/mia/as.php">Services</a>
+  <a href="http://localhost/testmia/searchcase.php">Alphabetical Search</a>
+  <a href="http://localhost/testmia/homepage.php">Homepage</a>
    <button><a id="btn" onclick="dtow()">Dark mode</a></button>
   <div class="dropdown-container">
     <a href="hello.html">Make a Post</a>
   </div>
   <a href="#contact">Search</a>
- 
-
-
       </div>
  </div>
  <!---->
@@ -55,7 +52,7 @@
 		<input type="text" placeholder="last name"  name="last_name"required/>
 		<!---->
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<select id="suffix" name="suffix">
+		<select id="suffix" name="suffix" required>
             <option value="Sr.">Sr.</option>
             <option value="Jr." selected>Jr.</option>
             <option value="III">II</option>
@@ -112,30 +109,30 @@
 		<label>Distinguishing Characteristics:</label>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<label> Clothing/Jewelry Description:</label>
-		<textarea  rows="10" cols="70" id="text_1"  name="text_1" required></textarea>
+		<textarea  rows="10" cols="70" id="text_1" placeholder="put n/a if none"  name="text_1" required></textarea>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<textarea  rows="10" cols="70" id="text_2"  name="text_2" required></textarea><br>
+		<textarea  rows="10" cols="70" id="text_2"  name="text_2" placeholder="put n/a if none" required></textarea><br>
 		<!---->
 		<br><br><br>
 		<label>Medical Conditions:</label>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<label> Associated Vehicle(s):</label>
 		<br>
-		<textarea  rows="10" cols="70" id="text_3"  name="text_3" required></textarea>
+		<textarea  rows="10" cols="70" id="text_3"  name="text_3" placeholder="put n/a if none" required></textarea>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<textarea  rows="10" cols="70" id="text_4"  name="text_4" required></textarea>
+		<textarea  rows="10" cols="70" id="text_4"  name="text_4" placeholder="put n/a if none" required></textarea>
 		<br><br><br>
 		<label>Details of Disappearance: </label>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<label>Investigating Agency:</label>
 		<br>
-		<textarea  rows="10" cols="70" id="text_5"  name="text_5" required></textarea>
+		<textarea  rows="10" cols="70" id="text_5"  name="text_5" placeholder="put n/a if none" required></textarea>
 		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<textarea  rows="10" cols="70" id="text_6"  name="text_6" required></textarea><br>
+		<textarea  rows="10" cols="70" id="text_6"  name="text_6" placeholder="put n/a if none" required></textarea><br>
 		<br><br><br>
 		<label>Source Of Information:</label>
 		<br>
-		<textarea  rows="10" cols="70" id="text_7"  name="text_7" required></textarea>
+		<textarea  rows="10" cols="70" id="text_7"  name="text_7" placeholder="put n/a if none" required></textarea>
 		<!---->
 		<div class = "last_">
 		<label for="name">Your Gmail</label><br>
@@ -147,7 +144,7 @@
   
 		<!---->
 		<br>
-		<input type="file" name="images[]" multiple/>
+		<input type="file" name="images[]" multiple required/>
 		<input type="submit" name="submit" value="submit"/>
 	</div>
 
@@ -276,7 +273,7 @@ if(isset($_POST['submit'])){
 		$data .=$file." ";
 
 	}
-	$query="insert into records(images,name,middle_name,last_name,
+	$query="insert into records_app(images,name,middle_name,last_name,
 	suffix,sex,missing_since,city,street,classification,birthday,age,height_weight,race,
 	text_1,text_2,text_3,text_4,text_5,text_6,text_7,gmail)
 	values('$data','$name','$middle_name','$last_name',

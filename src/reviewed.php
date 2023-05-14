@@ -7,7 +7,7 @@ include 'config.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-     <link rel="stylesheet" type="text/css" href="searchcase.css">
+     <link rel="stylesheet" type="text/css" href="1_yrcase.css">
     <title>Alphabetical Search</title>
 </head>
 <body>
@@ -15,7 +15,7 @@ include 'config.php';
 <p id="title" style="font-size:30px;font-family:verdana"><b>MISSING<span style="color:red;"> IN </span> ACTION</b></p>
 <br><br><br><br><br><br>
 <p  style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Alphabetical Case</b></p>
-<p> Authorities have designated this page as Missing.&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://localhost/testmia/reviewed.php">See Approved and reviewed but not Authorized by Authorities</a></p>
+<p> Approved and reviewed but not Authorized by Authorities &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://localhost/testmia/searchcase.php">See Approved As Missing by the Authorities</a>
 
 
 <!---->
@@ -42,12 +42,12 @@ include 'config.php';
     //$connection = mysqli_connect('localhost','root','','multiple');
     if(isset($_POST['search'])){
         $searchKey = $_POST['search'];
-        $sql="SELECT * FROM test WHERE name LIKE '%$searchKey%'  or middle_name LIKE '%$searchKey%' or last_name LIKE '%$searchKey%' ";
+        $sql="SELECT * FROM records_app WHERE name LIKE '%$searchKey%'  or middle_name LIKE '%$searchKey%' or last_name LIKE '%$searchKey%' ";
     }else{
-        $sql="SELECT * FROM test";
+        $sql="SELECT * FROM records_app";
         $searchKey = "";
     }
-    $sql="Select * from `test` 
+    $sql="Select * from `records_app` 
                 where  name like '%$searchKey%' or 
                 last_name like '%$searchKey%'";
                 $result=mysqli_query($con,$sql);
@@ -77,7 +77,7 @@ include 'config.php';
                 
                         <tbody>
                         <tr>
-                        <td><a href="approvedrecords.php?name_id='.$row['id'].'">'.$row['id'].'</a></td>
+                        <td><a href="dateofcase_edited.php?name_id='.$row['id'].'">'.$row['id'].'</a></td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <td>'.$row['name'].'</td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

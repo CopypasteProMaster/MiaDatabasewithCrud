@@ -9,7 +9,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$result = mysqli_query($con, "SELECT * FROM test ORDER BY id DESC"); // using mysqli_query instead
+$result = mysqli_query($con, "SELECT * FROM records ORDER BY id DESC"); // using mysqli_query instead
 ?>
 
 <html>

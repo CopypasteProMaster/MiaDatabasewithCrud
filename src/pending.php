@@ -9,7 +9,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$result = mysqli_query($con, "SELECT * FROM records ORDER BY id DESC"); // using mysqli_query instead
+$result = mysqli_query($con, "SELECT * FROM records_app ORDER BY id DESC"); // using mysqli_query instead
 ?>
 
 <html>
@@ -22,7 +22,7 @@ $result = mysqli_query($con, "SELECT * FROM records ORDER BY id DESC"); // using
 	<p>This is the record of Missing People in pending</p>
      <a href="login.php">Logout</a>
      <a href="records.php">Approved</a>
-     <a href="add.html">Add New Data</a>
+     <a href="http://localhost/testmia/advance_add.php">Add New Data</a>
 
 	<table width='80%' border=0>
 

@@ -7,7 +7,7 @@ include 'config.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-     <link rel="stylesheet" type="text/css" href="searchcase.css">
+     <link rel="stylesheet" type="text/css" href="1_yrcase.css">
     <title>Alphabetical Search</title>
 </head>
 <body>
@@ -15,7 +15,7 @@ include 'config.php';
 <p id="title" style="font-size:30px;font-family:verdana"><b>MISSING<span style="color:red;"> IN </span> ACTION</b></p>
 <br><br><br><br><br><br>
 <p  style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Alphabetical Case</b></p>
-<p> Authorities have designated this page as Missing.&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://localhost/testmia/reviewed.php">See Approved and reviewed but not Authorized by Authorities</a></p>
+<p> This is the records missing for more less 1 year &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://localhost:8080/testmia/searchcase.php">See >1 year</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://localhost:8080/testmia/reviewed.php">See Approved and reviewed but not Authorized by Authorities</a></p>
 
 
 <!---->
@@ -24,10 +24,10 @@ include 'config.php';
       <button class="dropbtn">
         <span style="font-size:36px;cursor:pointer;" onclick="openNav()">&#9776;</span></button>
       <div class="dropdown-content">
-          <a href="http://localhost/testmia/as.php">About</a>
-          <a href="http://localhost/testmia/as.php">Services</a>
-          <a href="http://localhost/testmia/advance_add.php">Advanced Add</a>
-          <a href="http://localhost/testmia/homepage.php">Homepage</a>
+          <a href="http://localhost:8080/testmia/as.php">About</a>
+          <a href="http://localhost:8080/testmia/as.php">Services</a>
+          <a href="http://localhost:8080/testmia/advance_add.php">Advanced Add</a>
+          <a href="http://localhost:8080/testmia/homepage.php">Homepage</a>
    <button><a id="btn" onclick="dtow()">Dark mode</a></button>
       </div>
  </div>
@@ -77,7 +77,7 @@ include 'config.php';
                 
                         <tbody>
                         <tr>
-                        <td><a href="approvedrecords.php?name_id='.$row['id'].'">'.$row['id'].'</a></td>
+                        <td><a href="dateofcase_edited.php?name_id='.$row['id'].'">'.$row['id'].'</a></td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <td>'.$row['name'].'</td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
