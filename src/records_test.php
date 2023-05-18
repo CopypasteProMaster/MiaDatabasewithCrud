@@ -39,8 +39,7 @@ $result = mysqli_query($con, "SELECT * FROM records ORDER BY id DESC"); // using
 		echo "<td>".$res['name']."</td>";
 		echo "<td>".$res['age']."</td>";
 		echo "<td>".$res['gmail']."</td>";	
-		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a>  | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
-		echo "<td><a href=\"approvedrecords.php?name_id=$res[id]\">view</a>";
+		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> |<a href=\"records_view.php?name_id=$res[id]\">view</a>  | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 		
 	}
 	?>

@@ -16,12 +16,11 @@ $result = mysqli_query($con, "SELECT * FROM records_app ORDER BY id DESC"); // u
 <head>	
 	<title>Homepage</title>
 </head>
-
 <body>
 	<h1>Hello, <?php echo $_SESSION['name']; ?></h1>
 	<p>This is the record of Missing People in pending</p>
      <a href="login.php">Logout</a>
-     <a href="records.php">Approved</a>
+     <a href="records_test.php">Approved</a>
      <a href="http://localhost/testmia/advance_add.php">Add New Data</a>
 
 	<table width='80%' border=0>
@@ -39,8 +38,10 @@ $result = mysqli_query($con, "SELECT * FROM records_app ORDER BY id DESC"); // u
 		echo "<td>".$res['name']."</td>";
 		echo "<td>".$res['age']."</td>";
 		echo "<td>".$res['gmail']."</td>";	
-		echo "<td><a href=\"edit_pending.php?id=$res[id]\">Edit</a> | <a href=\"delete_pending.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
-	}
+		//echo "<td><a href=\"edit_pending.php?id=$res[id]\">Edit</a> | <a href=\"delete_pending.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
+		echo "<td><a href=\"edit_pending.php.php?id=$res[id]\">Edit</a> |<a href=\"pending_view.php?name_id=$res[id]\">view</a>  | <a href=\"delete_pending.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+		
+	}  
 	?>
 	</table>
 </body>

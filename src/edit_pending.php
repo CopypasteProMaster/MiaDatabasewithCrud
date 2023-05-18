@@ -161,7 +161,7 @@ while($user_data = mysqli_fetch_array($result))
 	$gmail = $user_data['gmail'];
 }
 ?>
-<html>=
+<html>
 <head>
 	<title>Edit User Data</title>
 </head>
